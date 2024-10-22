@@ -23,19 +23,19 @@
       ],
       "timeout": 100000,
       "retryCount": 6,
-      "url": "https://217.71.207.182/execute"
+      "url": "https://217.71.207.182/custom_sfmc/execute"
     }
   },
   "configurationArguments": {
     "applicationExtensionKey": "61defa1a-0a63-4f8f-b81c-5d4f5aa1d13e",
     "publish": {
-      "url": "https://217.71.207.182/publish"
+      "url": "https://217.71.207.182/custom_sfmc/publish"
     },
     "save": {
-      "url": "https://217.71.207.182/save"
+      "url": "https://217.71.207.182/custom_sfmc/save"
     },
     "validate": {
-      "url": "https://217.71.207.182/validate"
+      "url": "https://217.71.207.182/custom_sfmc/validate"
     }
   },
   "outcomes": [
