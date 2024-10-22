@@ -1,0 +1,85 @@
+{
+  "workflowApiVersion": "1.1",
+  "name": "¿Se confirma la visita correctamente?",
+  "description": "Custom Activity para confirmar visita",
+  "metaData": {
+    "icon": "images/icon.svg",
+    "category": "Custom",
+    "isConfigured": true
+  },
+  "type": "RESTDECISION",
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        {
+          "ContactKey": "{{Contact.Key}}",
+          "OrdenTrabajo": "{{Contact.Attribute.\"WA_Unificado_Sends\".OrdenTrabajo}}"
+        }
+      ],
+      "outArguments": [
+        {
+          "confirmacion": 0
+        }
+      ],
+      "timeout": 100000,
+      "retryCount": 6,
+      "url": "https://217.71.207.182/execute"
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "61defa1a-0a63-4f8f-b81c-5d4f5aa1d13e",
+    "publish": {
+      "url": "https://217.71.207.182/publish"
+    },
+    "save": {
+      "url": "https://217.71.207.182/save"
+    },
+    "validate": {
+      "url": "https://217.71.207.182/validate"
+    }
+  },
+  "outcomes": [
+    {
+      "arguments": {
+        "branchResult": "confirmada"
+      }
+    },
+    {
+      "arguments": {
+        "branchResult": "no confirmada"
+      }
+    }
+  ],
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          {
+            "ContactKey": {
+              "dataType": "Text",
+              "isNullable": false,
+              "access": "Visible",
+              "direction": "In"
+            },
+            "OrdenTrabajo": {
+              "dataType": "Text",
+              "isNullable": false,
+              "access": "Visible",
+              "direction": "In"
+            }
+          }
+        ],
+        "outArguments": [
+          {
+            "confirmacion": {
+              "dataType": "Number",
+              "isNullable": false,
+              "access": "Visible",
+              "direction": "Out"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
