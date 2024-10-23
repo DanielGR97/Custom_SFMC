@@ -23,19 +23,19 @@
       ],
       "timeout": 100000,
       "retryCount": 6,
-      "url": "https://217.71.207.182/execute"
+      "url": "https://marketingservices.totalplay.com.mx/execute"
     }
   },
   "configurationArguments": {
     "applicationExtensionKey": "53edb6cb-25a1-4114-b4bf-00079afb6b78",
     "publish": {
-      "url": "https://217.71.207.182/publish"
+      "url": "https://marketingservices.totalplay.com.mx/publish"
     },
     "save": {
-      "url": "https://217.71.207.182/save"
+      "url": "https://marketingservices.totalplay.com.mx/save"
     },
     "validate": {
-      "url": "https://217.71.207.182/validate"
+      "url": "https://marketingservices.totalplay.com.mx/validate"
     }
   },
   "outcomes": [
